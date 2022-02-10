@@ -1,0 +1,14 @@
+section {
+    border: 1px solid black;
+    background-color: beige;
+}
+
+h2 {
+    color: rgba(168, 11, 11, 0.89);
+}
+
+button {
+    color: beige;
+    background-color: rgba(168, 11, 11, 0.89);
+
+}
