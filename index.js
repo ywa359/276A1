@@ -1,10 +1,15 @@
-const express = require('express')
-const path = require('path')
-const PORT = process.env.PORT || 5000
 
-express()
-  .use(express.static(path.join(__dirname, 'public')))
-  .set('views', path.join(__dirname, 'views'))
-  .set('view engine', 'ejs')
-  .get('/', (req, res) => res.render('pages/index'))
-  .listen(PORT, () => console.log(`Listening on ${ PORT }`))
+  const express = require('express');
+  const path = require('path');
+  
+  const app = express();
+  const port = process.env.PORT || 8080;
+  app.use(express.static('public'))
+
+  // sendFile will go here
+  app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname, '/public/calculator.html'));
+  });
+  app.listen(port)
+
+  
